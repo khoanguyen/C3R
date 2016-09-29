@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C3R.CommonUtils.Extension.System
+namespace System
 {
     public static class ObjectExtension
     {
