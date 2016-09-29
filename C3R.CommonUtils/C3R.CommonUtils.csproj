@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DSAUtil.cs" />
+    <Compile Include="Extension\System\ObjectExtension.cs" />
     <Compile Include="Extension\System\StringExtension.cs" />
     <Compile Include="FileUtil.cs" />
     <Compile Include="HashUtil.cs" />
