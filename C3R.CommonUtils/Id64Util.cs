@@ -15,6 +15,10 @@ namespace C3R.CommonUtils
             _counter = -1;
         }
 
+        /// <summary>
+        /// Get new unique Id
+        /// </summary>
+        /// <returns></returns>
         public static long NewId()
         {
             lock (_gate)
@@ -34,6 +38,10 @@ namespace C3R.CommonUtils
             }
         }
         
+        /// <summary>
+        /// Create a ID-base from current time
+        /// </summary>
+        /// <returns></returns>
         private static long ComposeCurrent()
         {
             var result = 0L;

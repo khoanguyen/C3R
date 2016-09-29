@@ -9,6 +9,11 @@ namespace C3R.CommonUtils
 {
     public static class FileUtil
     {
+        /// <summary>
+        /// Reads all text from file path
+        /// </summary>
+        /// <param name="path">File path</param>
+        /// <returns></returns>
         public static string ReadTextAll(string path)
         {
             using (var reader = File.OpenText(path))
@@ -17,6 +22,11 @@ namespace C3R.CommonUtils
             }
         }
 
+        /// <summary>
+        /// Reads binary data from file
+        /// </summary>
+        /// <param name="path">File path</param>
+        /// <returns></returns>
         public static byte[] ReadBinAll(string path)
         {
             byte[] result = null;
@@ -39,6 +49,11 @@ namespace C3R.CommonUtils
             return result;
         }
 
+        /// <summary>
+        /// Saves text to file. Existing file will be overwritten
+        /// </summary>
+        /// <param name="path">File path</param>
+        /// <param name="text">Text to be saved</param>
         public static void SaveText(string path, string text)
         {
             using (var writer = new StreamWriter(File.Open(path, FileMode.Create)))
@@ -49,6 +64,11 @@ namespace C3R.CommonUtils
             }
         }
 
+        /// <summary>
+        /// Appends text to file
+        /// </summary>
+        /// <param name="path">File path</param>
+        /// <param name="text">Text to be appended</param>
         public static void AppendText(string path, string text)
         {
             using (var writer = new StreamWriter(File.Open(path, FileMode.Append)))
@@ -59,6 +79,11 @@ namespace C3R.CommonUtils
             }
         }
 
+        /// <summary>
+        /// Saves binary data to file. Existing file will be overwritten
+        /// </summary>
+        /// <param name="path">File path</param>       
+        /// <param name="bin">Binary data to be saved</param>
         public static void SaveBin(string path, byte[] bin)
         {
             using (var writer = new BinaryWriter(File.Open(path, FileMode.Create)))
@@ -69,6 +94,11 @@ namespace C3R.CommonUtils
             }
         }
 
+        /// <summary>
+        /// Appends binary data to file. Existing file will be overwritten
+        /// </summary>
+        /// <param name="path">File path</param>       
+        /// <param name="bin">Binary data to be appended</param>
         public static void AppendBin(string path, byte[] bin)
         {
             using (var writer = new BinaryWriter(File.Open(path, FileMode.Append)))
@@ -79,6 +109,10 @@ namespace C3R.CommonUtils
             }
         }
 
+        /// <summary>
+        /// Deletes File
+        /// </summary>
+        /// <param name="path">file path</param>
         public static void Delete(string path)
         {
             File.Delete(path);

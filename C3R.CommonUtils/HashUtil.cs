@@ -9,6 +9,11 @@ namespace C3R.CommonUtils
 {
     public static class HashUtil
     {
+        /// <summary>
+        /// Generates SHA1 hash of given byte array input
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static byte[] ToSHA(byte[] input)
         {
             byte[] cipher = null;
@@ -17,6 +22,11 @@ namespace C3R.CommonUtils
             return cipher;
         }
 
+        /// <summary>
+        /// Generates SHA1 hash from UTF8 string
+        /// </summary>
+        /// <param name="utf8Str"></param>
+        /// <returns></returns>
         public static string ToSHA(string utf8Str)
         {
             var bytes = Encoding.UTF8.GetBytes(utf8Str);
@@ -24,6 +34,12 @@ namespace C3R.CommonUtils
             return cipher.ToHexString();
         }
 
+        /// <summary>
+        /// Generates SHA1 hash from UTF8 string with salt
+        /// </summary>
+        /// <param name="utf8Str"></param>
+        /// <param name="salt"></param>
+        /// <returns></returns>
         public static string ToSaltedSHA(string utf8Str, string salt)
         {
             var salted = $"{utf8Str}-{salt}";
